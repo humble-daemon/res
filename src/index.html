@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Res</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo" onclick="clickHome()">Res</div>
+            <ul class="nav_options collapsed">
+                <li><button id="home">home</button></li>
+                <li><button id="menu">menu</button></li>
+                <li><button id="about">about</button></li>
+            </ul>
+            <div class="ham-burger" onclick="toggleMenu()"><button>|||</button></div>
+        </nav>
+    </header>
+
+    <div id="content">
+    </div>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector(".nav_options");
+            menu.classList.toggle("expanded");
+            console.log("toggling");
+        }
+        function clickHome(){
+            document.getElementById("home").click();
+        }
+    </script>
+</body>
+</html>

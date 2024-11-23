@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+
+nav{
+    display: flex;
+    gap : 20px;
+    padding: 10px;
+    position: relative;
+}
+
+nav ul{
+    display: flex;
+    gap: 20px;
+    transition: max-width 0.3s ease; /* Smooth transition */
+}
+
+nav ul button{
+    border : none;
+    outline : none;
+    font-size: inherit;
+    background-color: rgba(240, 248, 255, 0);
+}
+
+.ham-burger{
+    margin-left: auto;
+    display: none;
+}
+
+
+@media screen and (max-width: 300px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: relative; /* Changed from absolute */
+        top: 0; /* Ensure no overlap */
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+        max-height: 0px; /* Use max-height instead of max-width */
+        transition: max-height 0.3s ease; /* Smooth transition */
+    }
+
+    nav ul.expanded {
+        max-height: 200px; /* Adjust to fit your menu items */
+    }
+
+    .ham-burger {
+        display: block;
+    }
+}
+
+
+/* home styling  */
+
+.home_content{
+    text-align: center;
+    padding: 200px 0;
+}
+
+
+.about_content{
+    padding: 30px 20px;
+}
+
+.about_content p{
+    line-height: 1.5;
+    width: 80%;
+}
